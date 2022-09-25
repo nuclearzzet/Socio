@@ -24,9 +24,9 @@ use App\DotEnv;
      <header>
      <nav class="navbar">
           <ul class="navbar_list">
-               <li class="nav_link nav_link_1"><a href="index.php">Socioo</a></li>
-               <li class="nav_link nav_link_2"><a href="about.php">About</a></li>
-               <li class="nav_link nav_link_3"><a href="team.php">Our Team</a></li>
+               <li class="nav_link"><a href="index.php">Socioo</a></li>
+               <li class="nav_link"><a href="about.php">About</a></li>
+               <li class="nav_link"><a href="team.php">Our Team</a></li>
           </ul>
           <ul class="navbar_list">
                <li class="nav_link nav_link_4"><a href="signIn.php">Sign In</a></li>
