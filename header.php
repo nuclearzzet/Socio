@@ -1,3 +1,14 @@
+<?php
+
+include "./dotenv.php";
+
+use App\DotEnv;
+
+(new DotEnv(__DIR__ . '/.env'))->load();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
