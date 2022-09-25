@@ -1,7 +1,7 @@
 <?php
 class Database
 {
-     private $host = "remotemysql.com";
+     private $host = "remotemysql.com:3306";
 
      private $conn = '';
 
@@ -10,14 +10,7 @@ class Database
           $user = getenv("db_username");
           $pass = getenv("db_password");
           $dbName = getenv("db_name");
-          $this->conn = null;
 
-          try {
-               $this->conn = new PDO('mysql:host = ' . $this->host . ';dbname = ' .
-                    $dbName . $user . $pass);
-          } catch (PDOException $err) {
-               echo "Connection not made " . $err->getMessage();
-               die();
-          }
+          $this->conn = new mysqli($this->host, $user, $pass, $dbName);
      }
 }
