@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);
+
+body {
+     margin: 0;
+     background-color: #eee;
+     color: #111;
+     font-family: "Open sans", "Seoge UI", sans-serif;
+     height: 100vh;
+}
+
+a{
+     text-decoration: none;
+}
+.navbar{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #222;
+     padding-top: 0.3em;
+     padding-bottom: 0.3em;
+     position: relative;
+}
+ 
+.navbar_list{
+     display: flex;
+     list-style: none;
+     flex-wrap: wrap;
+}
+.nav_link_2, .nav_link_3{
+     padding-left: 4em;
+}
+.nav_link_4{
+     margin-top: .6em;
+     padding-right: 2em;
+}
+.nav_link a{
+     font-size: 18px;
+     color: #ffffff;
+}
+ 
+.nav_link a:hover{
+     font-size: 20px;
+     text-decoration: underline;
+}
+ 
+.btn_contact button{
+     font-weight: 700;
+     font-size: 15px;
+     margin-right: 3.5em;
+     background-color: #ffffff;
+     border: 3px solid #242424;
+     color: #222;
+     border-radius: 26px;
+     padding: .7em 3.5em .7em 3.5em;
+}
+
+.btn_contact button:hover{
+     background-color: #222;
+     color: #eee;
+}
+
+/* @media (prefers-color-scheme: dark) {
+     body {
+          background-color: #1a1a1a;
+          color: #eee;
+     }
+     a{
+          color: #eee;
+     }
+} */

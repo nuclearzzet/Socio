@@ -1,10 +1,9 @@
 <?php
-include "header.php";
+include "inc/header.php";
 
 ?>
 
-<h1>Hi mom!</h1>
 
 <?php
-include "footer.php";
+include "inc/footer.php";
 ?>
