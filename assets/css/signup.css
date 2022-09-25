@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);
+
+input, button{
+    font-family: "Open sans", "Seoge UI", sans-serif;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 3.8em;
+}
+.inputs-container{
+    padding: 2.5em 10em 3em 10em;
+    border: .3em solid #222;
+    border-radius: .6em;
+    box-shadow: 2em .5em .5em #555;
+}
+
+.title{
+    justify-content: flex-start;
+}
+
+.form-input{
+    border-radius: .8em;
+    width: 30em;
+    height: 2.2em;
+    margin-bottom: 2em;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    border-bottom: #5080FF;
+    border: 0em;
+}
+
+.submit-btn{
+    background-color: #222;
+    color: #eee;
+    padding: .5em 14.3em .5em 14.3em;
+    border-radius: .8em;
+}
+.submit-btn:hover{
+    background-color: #111;
+}
