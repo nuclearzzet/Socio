@@ -5,7 +5,7 @@ include "dotenv.php";
 
 use App\DotEnv;
 
-(new DotEnv(__DIR__ . '/.env'))->load();
+(new DotEnv(__DIR__ . "/../.env"))->load();
 
 ?>
 
