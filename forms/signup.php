@@ -7,7 +7,8 @@ if (isset($_SERVER['submit'])){
 
     if (!empty($username)){
         if ($password1 == $password2){
-            echo "User Created";
+            $hashedPassword = hash("sha256", "Want to be a great programmer and physicst");
+            $sql = "INSERT INTO User (username, password) VALUES ($username, $hashedPassword)";
         }else{
             echo "Passwords Doesn't match";
         }
