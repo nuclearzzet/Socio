@@ -1,18 +1,26 @@
 <?php
 
-if (isset($_SERVER['submit'])){
-    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
-    $password1 = $_POST['password1'];
-    $password2 = $_POST['password2'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-    if (!empty($username)){
-        if ($password1 == $password2){
-            $hashedPassword = hash("sha256", "Want to be a great programmer and physicst");
-            $sql = "INSERT INTO User (username, password) VALUES ($username, $hashedPassword)";
-        }else{
-            echo "Passwords Doesn't match";
-        }
-    }else{
-        echo "Username can not be empty";
+    $username = htmlentities(filter_input(INPUT_POST, 'username', FILTER_UNSAFE_RAW), 'ENT_QUOTES');
+    $password1 = htmlentities($_POST['password1'], 'ENT_QUOTES');
+    $password2 = htmlentities($_POST['password2'], 'ENT_QUOTES');
+
+    if ($password1 == $password2){
+        inserToDB($conn, $username, $password1);
     }
+}
+
+function inserToDB($conn, $username, $hashedPassword){
+
+
+    $username = mysqli_real_escape_string($conn, $username);
+    $password = mysqli_real_escape_string($conn, $hashedPassword);
+
+    // SQL query
+    $sql = "INSERT INTO User (username, password) VALUES(?, ?)";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind("si", $username, $password);
+    $stmt->execute();
 }
