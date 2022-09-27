@@ -3,9 +3,9 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     // Recieve, Sanitize and Secure Inputs
-    $username = htmlentities(filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS), ENT_QUOTES);
-    $password1 = htmlentities($_POST['password1'], ENT_QUOTES);
-    $password2 = htmlentities($_POST['password2'], ENT_QUOTES);
+    $username = htmlentities(filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    $password1 = htmlentities($_POST['password1'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    $password2 = htmlentities($_POST['password2'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
 
     if ($password1 == $password2 && !empty($username)){
 
