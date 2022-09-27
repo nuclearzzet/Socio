@@ -6,7 +6,7 @@ input, button{
 .form-container{
     display: flex;
     justify-content: center;
-    margin-top: 3.8em;
+    margin-top: 5.8em;
 }
 .inputs-container{
     padding: 2.5em 10em 3em 10em;
@@ -24,14 +24,14 @@ input, button{
     margin-bottom: 2em;
     color: rgb(0, 0, 0);
     font-size: 14px;
-    border-bottom: #5080FF;
-    border: 0em;
+    border: 0;
     padding: 3px;
-    border-bottom: 1px solid #5080FF;
+    border-bottom: 1.5px solid #5080FF;
 }
 .form-input:hover{
     border-bottom: 3px solid #5080FF;
 }
+
 .submit-btn{
     background-color: #222;
     color: #eee;

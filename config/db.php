@@ -13,4 +13,7 @@ class Database
 
           $this->conn = new mysqli($this->host, $user, $pass, $dbName);
      }
+     public function getConn(){
+          return $this->conn;
+     }
 }
